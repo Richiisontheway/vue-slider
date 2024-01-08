@@ -29,6 +29,7 @@ const { createApp } = Vue;
 createApp({
     data(){
         return{
+            counter: 0,
             slides: [
                 {
                     image: 'img/01.webp',
@@ -57,12 +58,17 @@ createApp({
                 }
             ]
         }
-        
     },
     methods: {
         nextImage(i) {
-            console.log('bottone-cliccato');
+            console.log('bottone-avanti-cliccato');
             console.log(this.slides[i]);
+            counter++
+        },
+        prevImage(i) {
+            console.log('bottone-indietro-cliccato');
+            console.log(this.slides[i]);
+            counter--
         }
     }
 }).mount('#app');
