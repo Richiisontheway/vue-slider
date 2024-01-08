@@ -81,3 +81,57 @@ createApp({
         }
     }
 }).mount('#app');
+
+    {/* <template>
+    <div>
+        <div v-for="(slide, index) in slides" :key="index" v-show="index === currentIndex">
+        <!-- Contenuto dello slide -->
+        <h2>{{ slide.title }}</h2>
+        <p>{{ slide.description }}</p>
+        </div>
+
+        <button @click="prevSlide">Precedente</button>
+        <button @click="nextSlide">Successivo</button>
+        <button @click="toggleAutoplay">{{ autoplay ? 'Disattiva Autoplay' : 'Attiva Autoplay' }}</button>
+    </div>
+    </template>
+
+    <script>
+    export default {
+    data() {
+        return {
+        slides: [
+            { title: 'Slide 1', description: 'Contenuto dello slide 1' },
+            { title: 'Slide 2', description: 'Contenuto dello slide 2' },
+            { title: 'Slide 3', description: 'Contenuto dello slide 3' }
+        ],
+        currentIndex: 0,
+        autoplay: false,
+        autoplayInterval: null
+        };
+    },
+    methods: {
+        prevSlide() {
+        this.currentIndex = (this.currentIndex - 1 + this.slides.length) % this.slides.length;
+        },
+        nextSlide() {
+        this.currentIndex = (this.currentIndex + 1) % this.slides.length;
+        },
+        toggleAutoplay() {
+        this.autoplay = !this.autoplay;
+
+        if (this.autoplay) {
+            this.autoplayInterval = setInterval(() => {
+            this.nextSlide();
+            }, 3000); // Cambia slide ogni 3 secondi, puoi regolare l'intervallo come preferisci
+        } else {
+            clearInterval(this.autoplayInterval);
+        }
+        }
+    },
+    beforeDestroy() {
+        // Assicurati di cancellare l'intervallo quando il componente viene distrutto
+        clearInterval(this.autoplayInterval);
+    }
+    };
+    </script> */}
