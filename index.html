@@ -15,22 +15,17 @@
 
         <div class="container">
             <div class="slider-wrapper" tabindex="0">
-
-                <div v-for="(singleSlide,i) in slides">
-                    <div v-if="counter === i"  class="item">
-                        <img :src="singleSlide.image" alt="Spiderman" />
-                        <div class="text">
-                            <h3>
-                                {{ singleSlide.title }}
-                            </h3>
-                            <p>
-                                {{  singleSlide.text }}
-                            </p>
-                        </div>
+                <div class="item">
+                    <img :src="slides[counter].image" :alt="slides[counter].title" />
+                    <div class="text">
+                        <h3>
+                            {{ slides[counter].title }}
+                        </h3>
+                        <p>
+                            {{  slides[counter].text }}
+                        </p>
                     </div>
-                    
                 </div>
-
                 <div class="thumbs">
                     <div class="prev" @click.prevent="prevImage"></div>
                     <div class="next" @click.prevent="nextImage"></div>
